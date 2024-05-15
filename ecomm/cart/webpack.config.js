@@ -11,7 +11,10 @@ module.exports = {
       name: "cart",
       filename: "remoteEntry.js",
       exposes: {
-        "./CartShow": "./src/index",
+        "./CartShow": "./src/bootstrap",
+      },
+      shared: {
+        faker: { singleton: true }, //singleton is used to load only one copy but in all other application module version should be same otherwise we get warning
       },
     }),
     new HtmlWebpackPlugin({

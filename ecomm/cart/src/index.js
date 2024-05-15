@@ -1,4 +1,1 @@
-import faker from "faker";
-const cartText = `<div>You have ${faker.random.number()} items in your cart.</div>`;
-document.querySelector("#dev-cart").innerHTML = cartText;
-console.log("Cart");
+import("./bootstrap"); // this is used to load script async ex: faker
